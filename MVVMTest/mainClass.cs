@@ -12,14 +12,11 @@ namespace MVVMTest
         public VIEWModelB vb { get; set; }
         public mainClass()
         {
-            int i = 0;
             va = new VIEWModelA();
             vb = new VIEWModelB();
             va.PropertyChanged += (o, p) =>
            {
-               //vb.setText(DateTime.Now.ToString()) ;
-               vb.setText(i.ToString());
-               i++;
+               vb.setText("A:" + va.textA + "B:" + va.textB);
            };
         }
 

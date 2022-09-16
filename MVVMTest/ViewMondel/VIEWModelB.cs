@@ -8,7 +8,7 @@ using System.ComponentModel;
 namespace MVVMTest
 {
 
-    internal class VIEWModelB
+    internal class VIEWModelB : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -16,7 +16,7 @@ namespace MVVMTest
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        private string _testb { get; set; }
+        private string _testb;
         public string testB
         {
             get

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace MVVMTest
 {
@@ -19,32 +20,24 @@ namespace MVVMTest
 
         private string _a;
         private string _b;
-        public string testA
+        public string textA
         {
             get { return _a; }
             set
             {
                 _a = value;
-                B = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(nameof(textA));
             }
         }
-        public string B
+
+        public string textB
         {
-            get
-            {
-                return _b;
-            }
-            set
-            {
+            get { return _b; }
+            set 
+            { 
                 _b = value;
+                NotifyPropertyChanged(nameof(textB));
             }
-        }
-
-
-        public VIEWModelA()
-        {
-            testA = "Test";
         }
 
         

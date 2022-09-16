@@ -23,5 +23,6 @@ namespace MVVMTest
         {
             InitializeComponent();
         }
+
     }
 }
